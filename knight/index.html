@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> A Knight of the Seven Provinces</title>
+    <link rel="shortcut icon" href="Images/favicon-32x32.png"> 
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+    
+   <header class= "hero">
+      <nav class="nav container">
+        <div class="nav__logo">
+            <h2 class="nav__title">Are you a true knight?</h2>
+        </div>
+
+        <ul class="nav__link nav__link--menu">
+            <li class="nav__items">
+            <a href="#" class="nav__links">Home</a>
+           </li>
+           
+               <li class="nav__items">
+            <a href="#" class="nav__links">About Us</a>
+           </li>
+               <li class="nav__items">
+            <a href="#" class="nav__links">Contact Us</a>
+           </li>
+               <li class="nav__items">
+            <a href="#" class="nav__links">Blog</a>
+           </li>
+
+           
+           <img src="Images/jonathan-kemper-Y5euuAtArhU-unsplash.jpg" class= "nav__close" alt=""/>
+         </ul>
+
+      </nav>
+
+
+
+       
+
+       <section class="hero__container container">
+        <h1 class="hero__title">Find the best Chainmail of the Meadow</h1>
+        <p class="hero__paragraph">"From the misty peaks of the Cerro de la Muerte to the vibrant gold mines of the Osa Peninsula, we source the rarest, most durable materials Costa Rica has to offer. Our artisans combine ancestral Tico secrets with master blacksmithing to create premium chainmail and armor that isn’t just gear, it's a tribute to the raw, untamed power of our sacred lands."</p>
+        <a href="#" class="cta">Your knight path starts know</a>
+       </section>
+   </header>
+    
+        <main>
+            <section class="container about">
+                <h2 class="subtitle"> Select your Armour</h2>
+                <p class="about_paragraph"> Every knight traveling through the provinces requires gear forged with absolute precision. Choose the protection that will accompany you on your path</p>
+                   
+
+                 <div class="about__main">
+                    <article class="about__icons" onclick="filtrarCategoria('WEAPON')">
+                    <img src="Images/weapon.svg" class="about__icon"
+                    <h3 class="about__title">WEAPON</h3>
+                    <p class="about__paragraph">Longsword, Bastard Sword, Arming Sword, Poleaxe, Flail... </p>
+
+                    </article>
+
+                     <article class="about__icons" onclick="filtrarCategoria('ARMOUR')" >
+                    <img src="Images/helmet.svg" class="about__icon"
+                    <h3 class="about__title">ARMOUR</h3>
+                    <p class="about__paragraph">Light Armor, Mail Armor, Plate Armor, Noble Armor... </p>
+
+                    </article>
+                     <article class="about__icons" onclick="filtrarCategoria('SHIELD')">
+                    <img src="Images/shield.svg" class="about__icon"
+                    <h3 class="about__title">SHIELD</h3>
+                    <p class="about__paragraph">Classic Shields, Knight Shields, Noble Shields, Fantasy Shields... </p>
+
+                    </article>
+
+                    
+                 </div>
+            
+            </section>
+
+        
+
+
+            </section>
+           <section class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledge__texts">
+                    <h2 class="subtitle">Let no man mistake you for an unproven squire!</h2>
+                    <p class="knowledge__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi exercitationem quibusdam, doloremque provident, vel obcaecati laboriosam qui facere, quod aliquid illo soluta omnis repudiandae assumenda inventore. Ea, voluptatibus natus.</p>
+                    <a href="#" class="cta">The Quartermaster’s Spoils</a>
+                </div>
+                 
+                <figure class="knowledge__picture"> 
+                    <img src="Images/laptop.png" class="knowledge__img">
+                 </figure>
+             
+             
+                </div>
+           </section>
+
+           <section class="price container">
+            <h2 class="subtitle">You might also like: </h2>
+            <div class="price__table">
+                <div class="price__element"
+                <p class="price__name">Flexbox</p>
+                <h3 class="price__price">Wizards</h3>
+
+                <div class="price__items">
+                     <p class="price__features">Flexbox</p>
+                     <p class="price__features">Layouts</p>
+                     <p class="price__features">Responsive</p>
+
+                </div>
+
+                <a href="#" class="plan__cta">Now </a>
+            </div> 
+               
+                <div class="price__element price__element--best">
+                <p class="price__name">Grid</p>
+                <h3 class="price__price">Elves</h3>
+
+                <div class="price__items">
+                     <p class="price__features">Grid</p>
+                     <p class="price__features">Implicit Grid</p>
+                     <p class="price__features">Responsive</p>
+
+                </div>
+                <a href="#" class="price__cta">Now </a>
+                </div>
+            
+             <div class="price__element"_element--be>
+                <p class="price__name">Animaciones</p>
+                <h3 class="price__price">Dragons</h3>
+
+                <div class="price__items">
+                     <p class="price__features">Animation</p>
+                     <p class="price__features">Transition</p>
+                     <p class="price__features">Render Website</p>
+
+                </div>
+                <a href="#" class="price__cta">Now </a>
+                </div>
+
+        </div>
+           </section>
+
+           <section class="testimony">
+              <div class="testimony__container container">
+                <img src="Images/leftarrow.svg" class="testimony_arrow" id="before">
+                <section class="testimony__body testimony__body--show " data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class= "subtitle">Mi nombre es Lionel Messi, <span class="testimony__course">Elfo arquero profesional</span></h2>
+                        <p class="testimony__review"> Mejor que el fulbo porque el fulbo no tiene materiales tan de buena calida che</p>
+                    </div>
+
+                <figure class= "testimony__picture">
+                    <img src="Images/messielfo.jpg" class="testimony__img">
+                </figure>
+                </section>
+
+                        <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class= "subtitle">Duncan The Tall, <span class="testimony__course">Only a Hedge Knight</span></h2>
+                        <p class="testimony__review"> I didn't have many coppers left, but this was worth every single one</p>
+                    </div>
+
+                <figure class= "testimony__picture">
+                    <img src="Images/Ser-Duncan-the-Tall-2.jpg" class="testimony__img">
+                </figure>
+                 </section>
+             
+
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class= "subtitle">King Arthur, <span class="testimony__course">owner of Excálibur</span></h2>
+                        <p class="testimony__review"> By the power of the Dragon! The armor forged here shines with the light of a new kingdom, flawless and unyielding. I even found a relic worthy of Merlin’s deep magic. Truly, the King and the Land are One with this shop!</p>
+                    </div>
+
+                <figure class= "testimony__picture">
+                    <img src="Images/kingArthur - Copy.jpg" class="testimony__img">
+                </figure>
+
+
+                </section>
+            
+                <img src="Images/arrow.svg" class="testimony_arrow" id="next">
+              </div>
+           </section>
+
+                
+            <section class="questions container">
+                <h2 class="subtitle">FAQ</h2>
+                <p class="questions__paragraph">Lols</p>
+
+                <section class="questions__container">
+                    <article class="questions__padding">
+                       <div class="questions__answer">
+                        <h3 class="questions__title">Is there a physical location?
+                            <span class="questions__arrow">
+                                <img src="/Images/arrow.svg" class="questions__img">
+                           </span>
+
+                        </h3>
+
+                        <p class="questions__show">pracata</p>
+                       </div>
+                    </article>
+                     <article class="questions__padding">
+                       <div class="questions__answer">
+                        <h3 class="questions__title"> refund policy
+                            <span class="questions__arrow">
+                                <img src="./Images/arrow.svg" class="questions__img">
+                           </span>
+
+                        </h3>
+
+                        <p class="questions__show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure numquam corrupti vero dolorum nesciunt nisi minima ea nulla ullam ad! Dolor, quasi inventore! Labore voluptatum itaque dolore alias autem sed!</p>
+                       </div>
+                    </article>
+
+                      <article class="questions__padding">
+                       <div class="questions__answer">
+                        <h3 class="questions__title">Return and exchanges
+                            <span class="questions__arrow">
+                                <img src="./Images/arrow.svg" class="questions__img">
+                           </span>
+
+                        </h3>
+
+                        <p class="questions__show">pracata</p>
+                       </div>
+                    </article>
+               </section>
+
+             <section class="questions__offer">
+                    <h2 class="subtitle">Ready?</h2>
+            <p class= "questions__copy">Mary on a crosssssss</p>
+                    <a href="#" class="cta"> checks</a>
+                </section> 
+
+            </section>
+        </main>
+
+     
+        
+        <script src="js/index.js"></script>
+        <script src="./js/slider.js"></script>
+        <script src="./js/questions.js"></script>
+    
+</body>
+</html>

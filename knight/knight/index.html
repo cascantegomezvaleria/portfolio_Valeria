@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Knight of the Seven Provinces</title>
+    <meta name="description" content="A Knight of the Seven Provinces: a front-end demo store for chainmail, armour, weapons and shields. Built with HTML, CSS and JavaScript.">
+    <link rel="icon" href="Images/favicon-32x32.png">
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+
+   <header class="hero" id="top">
+      <nav class="nav container" aria-label="Main">
+        <div class="nav__logo">
+            <h2 class="nav__title">Are you a true knight?</h2>
+        </div>
+
+        <button class="nav__menu" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <svg class="nav__img" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M3 3h18v2H3zm0 8h18v2H3zm0 8h18v2H3z"></path>
+            </svg>
+        </button>
+
+        <ul class="nav__link nav__link--menu" id="nav-links">
+            <li class="nav__items"><a href="#top" class="nav__links">Home</a></li>
+            <li class="nav__items"><a href="#shop" class="nav__links">Shop</a></li>
+            <li class="nav__items"><a href="#reviews" class="nav__links">Reviews</a></li>
+            <li class="nav__items"><a href="#faq" class="nav__links">FAQ</a></li>
+            <li class="nav__items"><a href="../index.html" class="nav__links nav__links--back">&larr; Portfolio</a></li>
+            <li class="nav__items">
+                <button class="cart-toggle" type="button" id="cart-open" aria-haspopup="dialog" aria-controls="cart">
+                    Cart <span class="cart-toggle__count" id="cart-count">0</span>
+                </button>
+            </li>
+        </ul>
+      </nav>
+
+       <section class="hero__container container">
+        <h1 class="hero__title">Find the best Chainmail of the Meadow</h1>
+        <p class="hero__paragraph">"From the misty peaks of the Cerro de la Muerte to the vibrant gold mines of the Osa Peninsula, we source the rarest, most durable materials Costa Rica has to offer. Our artisans combine ancestral Tico secrets with master blacksmithing to create premium chainmail and armor that isn&rsquo;t just gear, it's a tribute to the raw, untamed power of our sacred lands."</p>
+        <a href="#shop" class="cta">Your knight path starts now</a>
+
+        <form class="hero__name" id="name-form" autocomplete="off">
+            <label for="knight-name" class="sr-only">Your name</label>
+            <input id="knight-name" type="text" maxlength="12" placeholder="Your name, knight (optional)">
+            <button type="submit" class="hero__name-btn">Greet me</button>
+        </form>
+       </section>
+   </header>
+
+        <main>
+            <section class="container about" id="shop">
+                <h2 class="subtitle" id="shop-title">Select your Armour</h2>
+                <p class="about_paragraph">Every knight traveling through the provinces requires gear forged with absolute precision. Choose the protection that will accompany you on your path</p>
+
+                 <div class="about__main">
+                    <button type="button" class="about__icons" data-category="WEAPON" onclick="filtrarCategoria('WEAPON')">
+                        <img src="Images/weapon.svg" class="about__icon" alt="">
+                        <h3 class="about__title">WEAPON</h3>
+                        <p class="about__paragraph">Longsword, Bastard Sword, Arming Sword, Poleaxe, Flail...</p>
+                    </button>
+
+                    <button type="button" class="about__icons" data-category="ARMOUR" onclick="filtrarCategoria('ARMOUR')">
+                        <img src="Images/helmet.svg" class="about__icon" alt="">
+                        <h3 class="about__title">ARMOUR</h3>
+                        <p class="about__paragraph">Light Armor, Mail Armor, Plate Armor, Noble Armor...</p>
+                    </button>
+
+                    <button type="button" class="about__icons" data-category="SHIELD" onclick="filtrarCategoria('SHIELD')">
+                        <img src="Images/shield.svg" class="about__icon" alt="">
+                        <h3 class="about__title">SHIELD</h3>
+                        <p class="about__paragraph">Classic Shields, Knight Shields, Noble Shields, Fantasy Shields...</p>
+                    </button>
+                 </div>
+
+                 <div class="filters" role="group" aria-label="Filter products">
+                    <button type="button" class="filters__btn filters__btn--active" data-filter="ALL" onclick="filtrarCategoria('ALL')">All</button>
+                    <button type="button" class="filters__btn" data-filter="WEAPON" onclick="filtrarCategoria('WEAPON')">Weapons</button>
+                    <button type="button" class="filters__btn" data-filter="ARMOUR" onclick="filtrarCategoria('ARMOUR')">Armour</button>
+                    <button type="button" class="filters__btn" data-filter="SHIELD" onclick="filtrarCategoria('SHIELD')">Shields</button>
+                 </div>
+                 <p class="products-count" id="products-count" aria-live="polite"></p>
+
+                 <div class="products-grid" id="products-grid"></div>
+            </section>
+
+           <section class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledge__texts">
+                    <h2 class="subtitle">Let no man mistake you for an unproven squire!</h2>
+                    <p class="knowledge__paragraph">Every piece leaves our forge tested, polished and fitted to your measurements. Wear gear that tells the provinces who you are before you ever draw your blade.</p>
+                    <a href="#shop" class="cta">The Quartermaster&rsquo;s Spoils</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="Images/laptop.webp" class="knowledge__img" alt="A full suit of plate armour displayed on a laptop screen" loading="lazy">
+                </figure>
+            </div>
+           </section>
+
+           <section class="price container" id="collections">
+            <h2 class="subtitle">You might also like:</h2>
+            <div class="price__table">
+                <div class="price__element">
+                    <p class="price__name">Robes &amp; Wards</p>
+                    <h3 class="price__price">Wizards</h3>
+                    <div class="price__items">
+                         <p class="price__features">Enchanted robes</p>
+                         <p class="price__features">Staff mounts</p>
+                         <p class="price__features">Rune-etched clasps</p>
+                    </div>
+                    <span class="price__cta price__cta--soon">Coming soon</span>
+                </div>
+
+                <div class="price__element price__element--best">
+                    <p class="price__name">Light Gear</p>
+                    <h3 class="price__price">Elves</h3>
+                    <div class="price__items">
+                         <p class="price__features">Featherlight mail</p>
+                         <p class="price__features">Longbow bracers</p>
+                         <p class="price__features">Leaf-pattern engraving</p>
+                    </div>
+                    <span class="price__cta price__cta--soon">Coming soon</span>
+                </div>
+
+                <div class="price__element">
+                    <p class="price__name">Heavy Forge</p>
+                    <h3 class="price__price">Dragons</h3>
+                    <div class="price__items">
+                         <p class="price__features">Dragonscale plate</p>
+                         <p class="price__features">Fire-tempered steel</p>
+                         <p class="price__features">Siege-rated shields</p>
+                    </div>
+                    <span class="price__cta price__cta--soon">Coming soon</span>
+                </div>
+            </div>
+           </section>
+
+           <section class="testimony" id="reviews">
+              <div class="testimony__container container">
+                <button type="button" class="testimony__arrow" id="before" aria-label="Previous review">
+                    <img src="Images/leftarrow.svg" alt="">
+                </button>
+
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Lionel Messi, <span class="testimony__course">Elfo arquero profesional</span></h2>
+                        <p class="testimony__review">Mejor que el fulbo porque el fulbo no tiene materiales tan de buena calida che</p>
+                    </div>
+                    <figure class="testimony__picture">
+                        <img src="Images/messielfo.jpg" class="testimony__img" alt="Elf archer in an Argentina jersey">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Duncan The Tall, <span class="testimony__course">Only a Hedge Knight</span></h2>
+                        <p class="testimony__review">I didn't have many coppers left, but this was worth every single one</p>
+                    </div>
+                    <figure class="testimony__picture">
+                        <img src="Images/ser-duncan.jpg" class="testimony__img" alt="Ser Duncan the Tall in mail and plate">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">King Arthur, <span class="testimony__course">owner of Excálibur</span></h2>
+                        <p class="testimony__review">By the power of the Dragon! The armor forged here shines with the light of a new kingdom, flawless and unyielding. I even found a relic worthy of Merlin&rsquo;s deep magic. Truly, the King and the Land are One with this shop!</p>
+                    </div>
+                    <figure class="testimony__picture">
+                        <img src="Images/king-arthur.jpg" class="testimony__img" alt="A knight raising a longsword">
+                    </figure>
+                </section>
+
+                <button type="button" class="testimony__arrow" id="next" aria-label="Next review">
+                    <img src="Images/rightarrow.svg" alt="">
+                </button>
+              </div>
+           </section>
+
+            <section class="questions container" id="faq">
+                <h2 class="subtitle">FAQ</h2>
+                <p class="questions__paragraph">Questions from travelers, answered by the forge.</p>
+
+                <section class="questions__container">
+                    <article class="questions__padding">
+                       <div class="questions__answer">
+                        <h3 class="questions__title" tabindex="0" role="button" aria-expanded="false">Is there a physical location?
+                            <span class="questions__arrow">
+                                <img src="Images/arrow.svg" class="questions__img" alt="">
+                           </span>
+                        </h3>
+                        <p class="questions__show">We are an online-only forge based in Costa Rica. Every order is packed by hand and shipped straight to your door.</p>
+                       </div>
+                    </article>
+
+                    <article class="questions__padding">
+                       <div class="questions__answer">
+                        <h3 class="questions__title" tabindex="0" role="button" aria-expanded="false">Refund policy
+                            <span class="questions__arrow">
+                                <img src="Images/arrow.svg" class="questions__img" alt="">
+                           </span>
+                        </h3>
+                        <p class="questions__show">If your gear arrives damaged or isn't what you ordered, tell us within 7 days and we will repair, replace or refund it.</p>
+                       </div>
+                    </article>
+
+                    <article class="questions__padding">
+                       <div class="questions__answer">
+                        <h3 class="questions__title" tabindex="0" role="button" aria-expanded="false">Returns and exchanges
+                            <span class="questions__arrow">
+                                <img src="Images/arrow.svg" class="questions__img" alt="">
+                           </span>
+                        </h3>
+                        <p class="questions__show">Unused pieces can be exchanged within 14 days. Made-to-measure items, like full plate harnesses, can only be adjusted, not returned.</p>
+                       </div>
+                    </article>
+                </section>
+
+                <section class="questions__offer">
+                    <h2 class="subtitle">Ready?</h2>
+                    <p class="questions__copy">Your armour is waiting at the forge.</p>
+                    <a href="#shop" class="cta">Start shopping</a>
+                </section>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-footer__inner container">
+                <p>Demo store built with HTML, CSS and JavaScript. No real payments are taken.</p>
+                <p><a href="../index.html">&larr; Back to Valeria&rsquo;s portfolio</a> &middot; &copy; <span id="year"></span></p>
+            </div>
+        </footer>
+
+        <!-- Cart drawer -->
+        <div class="cart-overlay" id="cart-overlay" hidden></div>
+        <aside class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" tabindex="-1">
+            <div class="cart__head">
+                <h2 class="cart__title" id="cart-title">Your cart</h2>
+                <button type="button" class="cart__close" id="cart-close" aria-label="Close cart">&times;</button>
+            </div>
+            <div class="cart__body" id="cart-body"></div>
+            <div class="cart__foot" id="cart-foot">
+                <p class="cart__total"><span>Total</span> <strong id="cart-total">₡0</strong></p>
+                <button type="button" class="cta cart__checkout" id="cart-checkout">Checkout</button>
+                <button type="button" class="cart__clear" id="cart-clear">Empty cart</button>
+            </div>
+        </aside>
+        <p class="sr-only" id="live-status" role="status" aria-live="polite"></p>
+
+        <script src="js/products.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/questions.js"></script>
+
+</body>
+</html>
